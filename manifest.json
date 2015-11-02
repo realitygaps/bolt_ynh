@@ -1,0 +1,42 @@
+{
+    "name": "Bolt",
+    "id": "bolt",
+    "description": {
+        "en": "Bolt is an open source Content Management Tool, which strives to be as simple and straightforward as possible."
+    },
+    "url": "http://bolt.cm/",
+    "maintainer": {
+        "name": "realitygaps",
+        "email": "realitygaps@gapsinreality.com"
+    },
+    "multi_instance": "true",
+    "arguments": {
+        "install" : [
+            {
+                "name": "domain",
+                "type": "domain",
+                "ask": {
+                    "en": "Choose a domain for Bolt"
+                },
+                "example": "domain.org"
+            },
+            {
+                "name": "path",
+                "type": "path",
+                "ask": {
+                    "en": "Choose a path for Bolt"
+                },
+                "example": "/bolt",
+                "default": "/bolt"
+            },
+            {
+                "name": "public_site",
+                "ask": {
+                    "en": "Is it a public Bolt site?"
+                },
+                "choices": ["Yes", "No"],
+                "default": "Yes"
+            }
+        ]
+    }
+}

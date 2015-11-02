@@ -1,0 +1,34 @@
+#!/bin/bash
+
+set -e
+
+# Retrieve arguments
+domain=$(sudo yunohost app setting bolt domain)
+path=$(sudo yunohost app setting bolt path)
+db_pwd=$(sudo yunohost app setting bolt mysqlpwd)
+
+# Remove trailing "/" for next commands
+path=${path%/}
+
+# Use 'owncloud' as database name and user \
+db_user=bolt
+
+# Copy files to the right place
+final_path=/var/www/bolt
+sudo mkdir -p $final_path
+sudo mkdir -p $data_path
+sudo cp -a ../sources/. $final_path/
+
+sudo chmod +x $final_path/app/nut
+sudo chmod -R 777 $final_path/files/ $final_path/app/database/ $final_path/app/cache/ $final_path/app/config/ $final_path/theme/ $final_path/extensions/
+
+# Reload Nginx and regenerate SSOwat conf
+sudo killall php5-fpm
+sudo service php5-fpm start
+sudo service nginx reload
+sudo yunohost app setting owncloud unprotected_uris -v "/"
+sudo yunohost app setting owncloud skipped_uris -d
+sudo yunohost app ssowatconf
+
+
+
