@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/zsh -f
 
 # Retrieve arguments
 domain=$1
@@ -23,10 +23,15 @@ db_user=bolt
 sudo yunohost app initdb $db_user -p $db_pwd
 sudo yunohost app setting bolt mysqlpwd -v $db_pwd
 
+wget -nv -O bolt-latest.tar.gz https://bolt.cm/distribution/bolt-latest.tar.gz
+
+sudo tar -C $final_path -xf jappix.tar.gz --strip-components 1
+sudo cp ../conf/*.xml $final_path/store/conf/
+
 # Copy files to the right place
 final_path=/var/www/bolt
 sudo mkdir -p $final_path
-sudo cp -a ../sources/* $final_path
+sudo tar -C $final_path -xf bolt-latest.tar.gz --strip-components 1
 sudo cp ../conf/config.yml $final_path/app/config/config.yml
 
 # Change variables in bolt configuration
