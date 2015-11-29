@@ -37,8 +37,6 @@ sudo cp ../conf/config.yml $final_path/app/config/config.yml
 sudo sed -i "s/yunopass/$db_pwd/g" $final_path/app/config/config.yml
 sudo chmod +x $final_path/app/nut
 sudo chmod -R 777 $final_path/files/ $final_path/app/database/ $final_path/app/cache/ $final_path/app/config/ $final_path/theme/ $final_path/extensions/
-sudo sed -i "s@URLWORDPRESS@$domain$path@g" ../conf/*.sql
-sudo sed -i "s/I18NTOCHANGE/$language/g" ../conf/*.sql
 
 # Set permissions to bolt directory
 sudo chown -R www-data: $final_path
