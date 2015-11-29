@@ -18,7 +18,7 @@ db_user=bolt
 wget -nv -O bolt-latest.tar.gz https://bolt.cm/distribution/archive/bolt-${VERSION}.tar.gz
 
 # Copy files to the right place
-$final_path=/var/www/bolt
+final_path=/var/www/bolt
 
 sudo tar -C $final_path -xf bolt-${VERSION}.tar.gz --strip-components 1
 
