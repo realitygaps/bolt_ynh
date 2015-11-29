@@ -28,7 +28,7 @@ sudo yunohost app setting bolt mysqlpwd -v $db_pwd
 wget -nv -O bolt-latest.tar.gz https://bolt.cm/distribution/archive/bolt-${VERSION}.tar.gz
 
 # Copy files to the right place
-$final_path=/var/www/bolt
+final_path=/var/www/bolt
 sudo mkdir -p $final_path
 sudo tar -C $final_path -xf bolt-${VERSION}.tar.gz --strip-components 1
 sudo cp ../conf/config.yml $final_path/app/config/config.yml
