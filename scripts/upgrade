@@ -15,8 +15,6 @@ db_user=bolt
 
 # Copy files to the right place
 final_path=/var/www/bolt
-sudo mkdir -p $path
-sudo cp -a ../sources/. $path/
 
 sudo chmod +x $final_path/app/nut
 sudo chmod -R 777 $final_path/files/ $final_path/app/database/ $final_path/app/cache/ $final_path/app/config/ $final_path/theme/ $final_path/extensions/
