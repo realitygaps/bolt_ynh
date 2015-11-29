@@ -10,7 +10,7 @@ db_pwd=$(sudo yunohost app setting bolt mysqlpwd)
 # Remove trailing "/" for next commands
 path=${path%/}
 
-# Use 'owncloud' as database name and user \
+# Use 'bolt' as database name and user \
 db_user=bolt
 
 # Copy files to the right place
