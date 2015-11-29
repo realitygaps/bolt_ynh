@@ -9,7 +9,7 @@
         "name": "realitygaps",
         "email": "realitygaps@gapsinreality.com"
     },
-    "multi_instance": "true",
+    "multi_instance": "false",
     "arguments": {
         "install" : [
             {
