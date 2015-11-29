@@ -15,7 +15,7 @@ path=${path%/}
 # Use 'bolt' as database name and user \
 db_user=bolt
 
-wget -nv -O bolt-latest.tar.gz https://bolt.cm/distribution/archive/bolt-${VERSION}.tar.gz
+wget -nv -O bolt-${VERSION}.tar.gz https://bolt.cm/distribution/archive/bolt-${VERSION}.tar.gz
 
 # Copy files to the right place
 final_path=/var/www/bolt

@@ -25,7 +25,7 @@ db_user=bolt
 sudo yunohost app initdb $db_user -p $db_pwd
 sudo yunohost app setting bolt mysqlpwd -v $db_pwd
 
-wget -nv -O bolt-latest.tar.gz https://bolt.cm/distribution/archive/bolt-${VERSION}.tar.gz
+wget -nv -O bolt-${VERSION}.tar.gz https://bolt.cm/distribution/archive/bolt-${VERSION}.tar.gz
 
 # Copy files to the right place
 final_path=/var/www/bolt
