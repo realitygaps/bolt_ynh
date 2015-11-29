@@ -239,7 +239,7 @@ accept_file_types: [ twig, html, js, css, scss, gif, jpg, jpeg, png, ico, zip, t
 # characters.
 branding:
 #    name: CMS
-    path: /admin
+    path: /bolt
 #    provided_by: [ supercool@example.org, "Supercool Webdesign Co." ]
 
 # Show the 'debug' nut in the lower right corner for logged-in user. By default,
