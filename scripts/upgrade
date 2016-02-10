@@ -29,8 +29,8 @@ sudo chmod -R 777 $final_path/files/ $final_path/app/database/ $final_path/app/c
 sudo killall php5-fpm
 sudo service php5-fpm start
 sudo service nginx reload
-sudo yunohost app setting owncloud unprotected_uris -v "/"
-sudo yunohost app setting owncloud skipped_uris -d
+sudo yunohost app setting bolt unprotected_uris -v "/"
+sudo yunohost app setting bolt skipped_uris -d
 sudo yunohost app ssowatconf
 
 
